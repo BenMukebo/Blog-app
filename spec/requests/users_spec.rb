@@ -21,7 +21,7 @@ RSpec.describe 'Users', type: :request do
 
   describe 'GET /show' do
     before(:each) { get user_path(32) }
-  
+
     it 'should return correct response' do
       # get '/users/show'
       expect(response).to have_http_status(200)

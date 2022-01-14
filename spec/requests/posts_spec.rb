@@ -17,7 +17,7 @@ RSpec.describe 'Posts', type: :request do
 
   describe 'GET /show' do
     before(:each) { get user_post_path user_id: 32, id: 54 }
-  
+
     it 'should return correct response' do
       expect(response).to have_http_status(200)
     end
