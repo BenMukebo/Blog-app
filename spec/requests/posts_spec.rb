@@ -10,7 +10,7 @@ RSpec.describe 'Posts', type: :request do
     it 'should render the correct template' do
       expect(response).to render_template(:index)
     end
-    it 'should have the text Posts' do
+    it 'should render the correct text in the template' do
       expect(response.body).to include('show the posts of a user')
     end
   end

@@ -5,11 +5,10 @@ RSpec.describe 'Users', type: :request do
     it 'should returns http 200 success' do
       # get '/users/index'
       get users_path
-      expect(response).to have_http_status(:success)
+      expect(response).to have_http_status(200)
     end
 
-
-    it 'should render index template correctly template ' do
+    it 'should render the correct template' do
       get users_path
       expect(response).to render_template(:index)
     end
@@ -23,16 +22,16 @@ RSpec.describe 'Users', type: :request do
   describe 'GET /show' do
     before(:each) { get user_path(32) }
   
-    it 'should returns http 200 success' do
+    it 'should return correct response' do
       # get '/users/show'
-      expect(response).to have_http_status(:success)
+      expect(response).to have_http_status(200)
     end
 
     it 'should render the show template ' do
       expect(response).to render_template(:show)
     end
 
-    it 'should include the word: Show the user details by ID' do
+    it 'should have the text Posts' do
       expect(response.body).to include('Show the user details by ID')
     end
   end
