@@ -16,6 +16,7 @@
 - Use Ruby Gems as a software packages system.
 - Understand Rails naming conventions.
 - Use params from browser requests in a safe way.
+- Write tests for controllers.
 
 ## Getting Started
 
@@ -29,7 +30,6 @@ To get a local copy for this project and running follow these simple example ste
 
 
 ## Setup
-
 
 ## Setting Up PostgreSQL
 
