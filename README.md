@@ -30,6 +30,16 @@ To get a local copy for this project and running follow these simple example ste
 
 ## Setup
 
+
+## Setting Up PostgreSQL
+
+- The postgres installation doesn't setup a user for you, so you'll need to follow these steps to create a user with permission to create databases
+
+```bash
+$  sudo -u postgres createuser blog-app -s
+```
+
+
 ### Clone this repository
 
 ```bash
@@ -90,8 +100,7 @@ $   rails server
 - We need a Controller. Since everything goes through that, let's go ahead and generate one:
 
 ```bash
-$  rails generate controller users index show 
-$  rails generate controller posts index show 
+$  rails generate rspec:install
 ```
 - This should give us a Controller and a View
 
@@ -102,13 +111,22 @@ $  rails generate controller posts index show
 
  You can also execute the `rails routes` command in your terminal to produce the same output.
 
-## Setting Up PostgreSQL
 
-- The postgres installation doesn't setup a user for you, so you'll need to follow these steps to create a user with permission to create databases
+
+#### Generate rspec
+
+- At the first you need to include those lines in your Gemfile
 
 ```bash
-$  sudo -u postgres createuser blog-app -s
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
 ```
+- Then run:
+
+```bash
+$  rails generate rspec:install
+```
+- This should generate some files that you will need to run your tests
 
 
 ## Built With
