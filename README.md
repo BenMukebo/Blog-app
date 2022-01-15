@@ -17,6 +17,8 @@
 - Understand Rails naming conventions.
 - Use params from browser requests in a safe way.
 - Write tests for controllers.
+- Understand what ORM is.
+- Use database migration fails to maintain database schema.
 
 ## Getting Started
 
@@ -128,7 +130,26 @@ $  rails generate rspec:install
 ```
 - This should generate some files that you will need to run your tests
 
+#### Generate migration files
 
+```bash
+  $  rails generate migration CreateUsers
+  $  rails generate migration CreatePosts
+  $  rails generate migration CreateLikes
+  $  rails generate migration CreateComments
+  $  rails generate migration AddUserRefToComments
+  $  rails generate migration AddPostRefToComments
+  $  rails generate migration AddUserRefToLikes
+  $  rails generate migration AddPostRefToLikes
+  $  rails generate migration AddUserRefToPosts
+```
+
+
+#### Generate Schema
+
+```bash
+  $   rails db:migrate
+```
 ## Built With
 
 This project is build with:
