@@ -5,6 +5,8 @@ class Post < ApplicationRecord
 
   after_save :update_posts_counter
 
+  private
+
   def update_posts_counter
     author.increment!(:posts_counter)
   end
@@ -13,4 +15,3 @@ class Post < ApplicationRecord
     comments.order('created_at DESC').limit(5)
   end
 end
-
