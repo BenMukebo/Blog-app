@@ -11,8 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20_220_125_101_541) do # rubocop:todo Metrics/BlockLength
-
-
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -21,7 +19,7 @@ ActiveRecord::Schema.define(version: 20_220_125_101_541) do # rubocop:todo Metri
 
     t.bigint 'author_id', null: false
     t.bigint 'post_id', null: false
-    
+
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
     t.index ['author_id'], name: 'index_comments_on_author_id'
@@ -38,13 +36,12 @@ ActiveRecord::Schema.define(version: 20_220_125_101_541) do # rubocop:todo Metri
   end
 
   create_table 'posts', force: :cascade do |t|
-
     t.string 'title'
     t.text 'text'
     t.integer 'comments_counter'
     t.integer 'likes_counter'
     t.bigint 'author_id', null: false
- 
+
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
     t.index ['author_id'], name: 'index_posts_on_author_id'
