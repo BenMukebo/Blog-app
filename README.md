@@ -146,6 +146,15 @@ $  rails generate rspec:install
   $  rails generate migration AddUserRefToPosts
 ```
 
+#### Generate model
+
+```bash
+  $  rails generate model User name  photo bio:text posts_counter:integer  
+  $  rails generate model Post  title  text:text comments_counter:integer likes_counter:integer author:references
+  $  rails generate model Like author:references post:references 
+  $  rails generate model Comments text:text author:references post:references
+```
+
 
 #### Generate model
 
