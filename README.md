@@ -19,6 +19,8 @@
 - Write tests for controllers.
 - Understand what ORM is.
 - Use database migration fails to maintain database schema.
+- Set up associations between models.
+- Write SQL queries with Active Record.
 
 ## Getting Started
 
@@ -145,7 +147,17 @@ $  rails generate rspec:install
 ```
 
 
+#### Generate model
+
+```bash
+  $  rails generate model User name  photo bio:text posts_counter:integer  
+  $  rails generate model Post  title  text:text comments_counter:integer likes_counter:integer author:references
+  $  rails generate model Like author:references post:references 
+  $  rails generate model Comments text:text author:references post:references
+```
 #### Generate Schema
+
+- TopPush the Migration into the database
 
 ```bash
   $   rails db:migrate
