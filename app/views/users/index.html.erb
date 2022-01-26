@@ -1,1 +1,18 @@
 <h1>List of users is here</h1>
+
+
+# <section class="users">
+#   <%= render @users %>
+# </section> 
+
+
+<section class="users">
+  <ul>
+    <% @users.each do |user| %>
+      <li class="list-users">
+        <%= render "user", :user =>user %>
+      </li>
+    <% end %>
+  </ul>
+</section>
+
