@@ -1,16 +1,16 @@
 <h1>Show the user details by ID</h1>
 
-<section>
+<section class="show-user">
   <%= render @user %>
   <div class="bio">
-    <h2>Bio</h2>
+    <h3>Bio</h3>
     <p><%= @user.bio %></p>
   </div>
   <div class="posts">
     <%= render @user.posts %>
   </div> 
   <div class="post-btn d-flex">
-    # <button class="posts-btn">See All Posts</button>
+    <button>See All Posts</button>
   </div>
 </section> 
 
