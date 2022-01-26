@@ -1,1 +1,23 @@
 <h1>show the posts of a user</h1>
+
+<div>
+  <%= render @user %>
+</div>
+<div>
+  # <% @user.posts.each_with_index do |post, index|%>
+  #   <div class="comment-bio">
+  #     <%= render partial: "post", locals: { post_counter: index, post: post } %>
+  #   </div>
+  #   <div class="comments-section">
+  #     <% post.most_recent_comments.each do |comment|%>
+  #       <p class="d-flex">
+  #         <span><%= comment.user.name %>:</span><span><%= comment.text %></span>
+  #       </p>
+  #     <% end %>
+  #   </div>
+  # <% end %>
+  <div class="posts">
+    <%= render @posts %>
+    <button>See All Posts</button>
+  </div>
+</div> 
