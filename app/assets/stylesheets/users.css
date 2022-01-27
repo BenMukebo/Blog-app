@@ -52,7 +52,7 @@ img {
  
 }
 
-.posts .posts-container {
+.posts .post-container {
   padding: 0.7rem 0.7rem 1rem;
   margin: 1rem 0;  
   border: var(--size-border);
@@ -61,11 +61,20 @@ img {
   position: relative;
 }
 
-.posts-container p {
+.posts .post-container {
+  padding: 0.7rem 0.7rem 1rem;
+  margin: 1rem 0;  
+  border: var(--size-border);
+  /* color: #272727; */
+  background-color: var(--primary-color);
+  position: relative;
+}
+
+.post-container p {
   margin: 0.5rem 0;
 }
 
-.posts-container .actions {
+.post-container .actions {
   position: absolute;
   bottom: 0.2rem;
   right: 1rem;

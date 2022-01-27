@@ -1,21 +1,25 @@
-<h1>show posts details</h1>
+<section class="posts-details">
+  <h1>show posts details</h1>
 
-
-<div>
-  <%= render @user %>
-</div>
-<div class="post-details">
-  <div class="single-post-details">
+  <div class="post-detail">
     <div class="title-details d-flex">
-      <p><%= @post.title %> by <%= @user.name%></p>
+      <h3><%= @post.title %> by <%= @user.name%></h3>
       <div>
         <span>Comments: <%= @post.comments_counter%></span>
         <span>Likes: <%= @post.likes_counter%></span>
       </div>
     </div>
-    <div>
-      <%= @post.text %>
-    </div>
+  
+    <%= @post.text %>
   </div>
 
-</div>
+  <div class="comments">
+    <% @comments.each do |comment|%>
+      <div class="comment"
+        <span><%= comment.author.name %>: <%= comment.text %></span>
+      </div>
+    <% end %>
+  </div>
+    
+
+</section>

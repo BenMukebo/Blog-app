@@ -4,10 +4,8 @@
   <%= render 'users/user', user: @user %>
 
   <div class="posts">
-    <% @posts.each do |post|%>
-      <div class="post"
-        <%= render 'posts/post', post: post %>
-      </div>
-    <% end %>
-  </div> 
+    <%= render  @posts %>
+  </div>  
+
+
 </section>
