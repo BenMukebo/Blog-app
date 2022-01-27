@@ -52,14 +52,6 @@ img {
  
 }
 
-.posts .post-container {
-  padding: 0.7rem 0.7rem 1rem;
-  margin: 1rem 0;  
-  border: var(--size-border);
-  /* color: #272727; */
-  background-color: var(--primary-color);
-  position: relative;
-}
 
 .posts .post-container {
   padding: 0.7rem 0.7rem 1rem;

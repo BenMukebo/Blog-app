@@ -14,9 +14,14 @@
   </div>
 
   <div class="comments">
+    <% if @comments == [] %>
+      <p>No comments !!!</p>
+    <% end %>
+
     <% @comments.each do |comment|%>
-      <div class="comment"
-        <span><%= comment.author.name %>: <%= comment.text %></span>
+      <div class="comment-container"
+        <span><%=comment.author.name %>:</span>
+        <span><%=comment.text %></span>
       </div>
     <% end %>
   </div>

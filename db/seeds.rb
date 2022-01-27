@@ -22,11 +22,25 @@ user3 = User.create!(name: 'Julia Lisa', photo: image3, bio: "#{lorem_bio}- Dann
 user4 = User.create!(name: 'Gomez lucky', photo: image4, bio: "#{lorem_bio}- Gomez lucky", posts_counter: 0)
 user5 = User.create!(name: 'Barry Alen', photo: image5, bio: "#{lorem_bio}- Barry alen", posts_counter: 0)
 
-lorem_one = '_One_Donec dapibus consequat tellus a pulvinar. Fusce auctor rhoncus orci a semper. Sed interdum accumsan.'
-lorem_two = '_Two_Mauris hendrerit odio eu quam dapibus, sit amet malesuada quam pulvinar venenatis ex, eu tristique orci.'
-lorem_third = '_Three_Fusce auctor rhoncus orci a semper dapibus, sit amet malesuada quam pulvinar.'
-lorem_four = '_Four_sit amet malesuada Fusce auctor rhoncus orci a semper dapibus, sit amet malesuada quam pulvinar.'
-lorem_five = '_five_gtysit amet malesuada Fusce auctor rhoncus orci a semper dapibus, sit amet malesuada quam pulvinar.'
+lorem_one = '_One_Donec dapibus consequat tellus a pulvinar. Fusce auctor rhoncus orci a semper. Sed interdum accumsan 
+  esse quia in corrupti doloremque laborum, omnis quae placeat facere aliquid amet excepturiquia in corrupti
+  doloremqueamet excepturi laborum,amet excepturi omnis quae placeat facere aliquid amet excepturi corrupti doloremque 
+  laborum, omnis quae placeat facere aliquid amet excepturiquia in corrupti ohfdjqjdoijsdasndkadsasdadkjaklnasd
+  doloremqueamet excepturi laborum,amet excepturi omnis quae placeat facere aliquid amet excepturi.'
+lorem_two = '_Two_Mauris Partial templates (partials) are a way of breaking the rendering process into more manageable 
+  chunks. Partials allow you to extract pieces of code from your templates to separate files and also reuse them t
+  hroughout your templates.hendrerit odio eu quam dapibus, sit amet malesuada quam pulvinar venenatis ex, eu tristique orci
+  esse quia in corrupti doloremque laborum, omnis quae placeat facere aliquid amet excepturiquia in corrupti
+  doloremqueamet excepturi laborum,amet excepturi omnis quae placeat facere aliquid amet excepturi.'
+lorem_third = '_Three_Fusce auctor rhoncus orci a semper dapibus, sit amet malesuada quam pulvinar
+  esse quia in corrupti doloremque laborum, omnis quae placeat facere aliquid amet excepturiquia in corrupti
+  doloremqueamet excepturi laborum,amet excepturi omnis quae placeat facere aliquid amet excepturi.'
+lorem_four = '_Four_sit amet malesuada Fusce auctor rhoncus orci a semper dapibus, sit amet malesuada quam pulvinar
+  esse quia in corrupti doloremque laborum, omnis quae placeat facere aliquid amet excepturiquia in corrupti
+  doloremqueamet excepturi laborum,amet excepturi omnis quae placeat facere aliquid amet excepturi.'
+lorem_five = '_five_gtysit amet malesuada Fusce auctor rhoncus orci a semper dapibus, sit amet malesuada quam pulvinar
+  esse quia in corrupti doloremque laborum, omnis quae placeat facere aliquid amet excepturiquia in corrupti
+  doloremqueamet excepturi laborum,amet excepturi omnis quae placeat facere aliquid amet excepturi.'
 
 post1 = user1.posts.create!(title: 'Animal', text: lorem_one, comments_counter: 0, likes_counter: 0)
 post2 = user1.posts.create!(title: 'Population', text: lorem_two, comments_counter: 0, likes_counter: 0)
@@ -44,22 +58,29 @@ post11 = user3.posts.create!(title: 'Univer', text: lorem_two, comments_counter:
 
 post12 = user4.posts.create!(title: 'Programming', text: lorem_one, comments_counter: 0, likes_counter: 0)
 post13 = user4.posts.create!(title: 'Arts', text: lorem_two, comments_counter: 0, likes_counter: 0)
-post12 = user4.posts.create!(title: 'Achool', text: lorem_third, comments_counter: 0, likes_counter: 0)
-post13 = user4.posts.create!(title: 'Business', text: lorem_four, comments_counter: 0, likes_counter: 0)
+post14 = user4.posts.create!(title: 'Achool', text: lorem_third, comments_counter: 0, likes_counter: 0)
+post15 = user4.posts.create!(title: 'Business', text: lorem_four, comments_counter: 0, likes_counter: 0)
 
-post12 = user5.posts.create!(title: 'Programming', text: lorem_third, comments_counter: 0, likes_counter: 0)
-post13 = user5.posts.create!(title: 'Arts', text: lorem_four, comments_counter: 0, likes_counter: 0)
-
-user3.comments.create!(text: 'Well Done 👏👏👏', post: post1)
-user2.comments.create!(text: 'Great like post ✔️✔️  ', post: post1)
-user5.comments.create!(text: 'really nice post brother', post: post2)
-user1.comments.create!(text: 'This is a great Read', post: post2)
-user2.comments.create!(text: 'Love 💕 it Aswell !!!', post: post2)
-user4.comments.create!(text: 'Love 💓 it!!!', post: post4)
-user5.comments.create!(text: 'We still need one more post😢', post: post4)
-user3.comments.create!(text: 'This is a terific post ', post: post5)
-user3.comments.create!(text: 'Well say,♻️♻️ that is realy true ', post: post5)
+user1.comments.create!(text: 'Well Done 👏👏👏', post: post1)
+user1.comments.create!(text: 'Great like post ✔️✔️  ', post: post3)
+user1.comments.create!(text: 'really nice post brother', post: post2)
+user2.comments.create!(text: 'This is a great Read', post: post2)
+user2.comments.create!(text: 'Love 💕 it Aswell !!!', post: post4)
+user2.comments.create!(text: 'Love 💓 it!!!', post: post5)
+user3.comments.create!(text: 'We still need one more post😢', post: post5)
+user3.comments.create!(text: 'This is a terific post ', post: post6)
+user3.comments.create!(text: 'Well say,♻️♻️ that is realy true ', post: post8)
 user3.comments.create!(text: 'Great look on this article', post: post7)
+user3.comments.create!(text: 'Well Done 👏👏👏', post: post1)
+user4.comments.create!(text: 'Great like post ✔️✔️  ', post: post1)
+user4.comments.create!(text: 'really nice post brother', post: post8)
+user4.comments.create!(text: 'This is a great Read', post: post9)
+user4.comments.create!(text: 'Love 💕 it Aswell !!!', post: post10)
+user4.comments.create!(text: 'Love 💓 it!!!', post: post11)
+user5.comments.create!(text: 'We still need one more post😢', post: post11)
+user5.comments.create!(text: 'This is a terific post ', post: post12)
+user5.comments.create!(text: 'Well say,♻️♻️ that is realy true ', post: post13)
+user5.comments.create!(text: 'Great look on this article', post: post11)
 
 user2.likes.create!(post: post1)
 user3.likes.create!(post: post1)
@@ -75,3 +96,13 @@ user2.likes.create!(post: post6)
 user5.likes.create!(post: post7)
 user4.likes.create!(post: post7)
 user1.likes.create!(post: post7)
+user2.likes.create!(post: post8)
+user3.likes.create!(post: post9)
+user1.likes.create!(post: post9)
+user3.likes.create!(post: post10)
+user5.likes.create!(post: post11)
+user1.likes.create!(post: post12)
+user4.likes.create!(post: post13)
+user4.likes.create!(post: post14)
+user3.likes.create!(post: post15)
+
