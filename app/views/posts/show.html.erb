@@ -1,9 +1,13 @@
 <h1>show posts details</h1>
 
-<div class="post-details-div">
-  <div class="single-post-details border-style">
+
+<div>
+  <%= render @user %>
+</div>
+<div class="post-details">
+  <div class="single-post-details">
     <div class="title-details d-flex">
-      <p><%= @post.title %> by <%= @post.user.name%></p>
+      <p><%= @post.title %> by <%= @user.name%></p>
       <div>
         <span>Comments: <%= @post.comments_counter%></span>
         <span>Likes: <%= @post.likes_counter%></span>
@@ -14,7 +18,7 @@
     </div>
   </div>
   <div class="comments-section border-style">
-    <% @post.five_recent_comments.each do |comment|%>
+    <% @post.most_recent_comments.each do |comment|%>
       <p class="d-flex"><span><%= comment.user.name %>:</span><span><%= comment.text %></span></p>
     <% end %>
   </div>
