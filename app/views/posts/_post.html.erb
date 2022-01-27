@@ -16,7 +16,7 @@
       <p>No comments !!!</p>
     <% end %>
   
-    <% post.comments.each do |comment|%>
+    <% post.comments.order('created_at DESC').limit(5).each do |comment|%>
       <div class="comment-container"
         <span><%=comment.author.name %>:</span>
         <span><%=comment.text %></span>

@@ -22,14 +22,14 @@ user3 = User.create!(name: 'Julia Lisa', photo: image3, bio: "#{lorem_bio}- Dann
 user4 = User.create!(name: 'Gomez lucky', photo: image4, bio: "#{lorem_bio}- Gomez lucky", posts_counter: 0)
 user5 = User.create!(name: 'Barry Alen', photo: image5, bio: "#{lorem_bio}- Barry alen", posts_counter: 0)
 
-lorem_one = '_One_Donec dapibus consequat tellus a pulvinar. Fusce auctor rhoncus orci a semper. Sed interdum accumsan 
+lorem_one = '_One_Donec dapibus consequat tellus a pulvinar. Fusce auctor rhoncus orci a semper. Sed interdum accumsan
   esse quia in corrupti doloremque laborum, omnis quae placeat facere aliquid amet excepturiquia in corrupti
-  doloremqueamet excepturi laborum,amet excepturi omnis quae placeat facere aliquid amet excepturi corrupti doloremque 
+  doloremqueamet excepturi laborum,amet excepturi omnis quae placeat facere aliquid amet excepturi corrupti doloremque
   laborum, omnis quae placeat facere aliquid amet excepturiquia in corrupti ohfdjqjdoijsdasndkadsasdadkjaklnasd
   doloremqueamet excepturi laborum,amet excepturi omnis quae placeat facere aliquid amet excepturi.'
-lorem_two = '_Two_Mauris Partial templates (partials) are a way of breaking the rendering process into more manageable 
+lorem_two = '_Two_Mauris Partial templates (partials) are a way of breaking the rendering process into more manageable
   chunks. Partials allow you to extract pieces of code from your templates to separate files and also reuse them t
-  hroughout your templates.hendrerit odio eu quam dapibus, sit amet malesuada quam pulvinar venenatis ex, eu tristique orci
+  hroughout your templates.hendrerit odio eu quam dapibus, sit amet malesuada quam pulvinar venenatis ex, eu
   esse quia in corrupti doloremque laborum, omnis quae placeat facere aliquid amet excepturiquia in corrupti
   doloremqueamet excepturi laborum,amet excepturi omnis quae placeat facere aliquid amet excepturi.'
 lorem_third = '_Three_Fusce auctor rhoncus orci a semper dapibus, sit amet malesuada quam pulvinar
@@ -105,4 +105,3 @@ user1.likes.create!(post: post12)
 user4.likes.create!(post: post13)
 user4.likes.create!(post: post14)
 user3.likes.create!(post: post15)
-
