@@ -19,23 +19,36 @@ image5 = 'https://user-images.githubusercontent.com/79058364/150398570-de44d578-
 user1 = User.create!(name: 'John Doe', photo: image1, bio: "#{lorem_bio}- John Doe", posts_counter: 0)
 user2 = User.create!(name: 'Michal Smith ', photo: image2, bio: "#{lorem_bio}- Michal Smith", posts_counter: 0)
 user3 = User.create!(name: 'Julia Lisa', photo: image3, bio: "#{lorem_bio}- Danny Dril", posts_counter: 0)
-user4 = User.create!(name: 'Gomez Lilia', photo: image4, bio: "#{lorem_bio}- Oliver Queen", posts_counter: 0)
+user4 = User.create!(name: 'Gomez lucky', photo: image4, bio: "#{lorem_bio}- Gomez lucky", posts_counter: 0)
 user5 = User.create!(name: 'Barry Alen', photo: image5, bio: "#{lorem_bio}- Barry alen", posts_counter: 0)
 
-lorem_one = 'Donec dapibus consequat tellus a pulvinar. Fusce auctor rhoncus orci a semper. Sed interdum accumsan.'
-lorem_two = 'Mauris hendrerit odio eu quam dapibus, sit amet malesuada quam pulvinar venenatis ex, eu tristique orci.'
-lorem_third = 'Fusce auctor rhoncus orci a semper dapibus, sit amet malesuada quam pulvinar.'
+lorem_one = '_One_Donec dapibus consequat tellus a pulvinar. Fusce auctor rhoncus orci a semper. Sed interdum accumsan.'
+lorem_two = '_Two_Mauris hendrerit odio eu quam dapibus, sit amet malesuada quam pulvinar venenatis ex, eu tristique orci.'
+lorem_third = '_Three_Fusce auctor rhoncus orci a semper dapibus, sit amet malesuada quam pulvinar.'
+lorem_four = '_Four_sit amet malesuada Fusce auctor rhoncus orci a semper dapibus, sit amet malesuada quam pulvinar.'
+lorem_five = '_five_gtysit amet malesuada Fusce auctor rhoncus orci a semper dapibus, sit amet malesuada quam pulvinar.'
 
 post1 = user1.posts.create!(title: 'Animal', text: lorem_one, comments_counter: 0, likes_counter: 0)
+post2 = user1.posts.create!(title: 'Population', text: lorem_two, comments_counter: 0, likes_counter: 0)
 
-post2 = user2.posts.create!(title: 'Science', text: lorem_one, comments_counter: 0, likes_counter: 0)
-post3 = user2.posts.create!(title: 'Education', text: lorem_two, comments_counter: 0, likes_counter: 0)
-post4 = user2.posts.create!(title: 'Business', text: lorem_third, comments_counter: 0, likes_counter: 0)
+post3 = user2.posts.create!(title: 'Science', text: lorem_one, comments_counter: 0, likes_counter: 0)
+post4 = user2.posts.create!(title: 'Education', text: lorem_two, comments_counter: 0, likes_counter: 0)
+post5 = user2.posts.create!(title: 'Business', text: lorem_third, comments_counter: 0, likes_counter: 0)
 
-post5 = user3.posts.create!(title: 'Sports', text: lorem_one, comments_counter: 0, likes_counter: 0)
-post6 = user3.posts.create!(title: 'Agriculture', text: lorem_two, comments_counter: 0, likes_counter: 0)
+post6 = user3.posts.create!(title: 'Sports', text: lorem_one, comments_counter: 0, likes_counter: 0)
+post7 = user3.posts.create!(title: 'Agriculture', text: lorem_two, comments_counter: 0, likes_counter: 0)
+post8 = user3.posts.create!(title: 'School', text: lorem_third, comments_counter: 0, likes_counter: 0)
+post9 = user3.posts.create!(title: 'Sport', text: lorem_four, comments_counter: 0, likes_counter: 0)
+post10 = user3.posts.create!(title: 'Arts', text: lorem_five, comments_counter: 0, likes_counter: 0)
+post11 = user3.posts.create!(title: 'Univer', text: lorem_two, comments_counter: 0, likes_counter: 0)
 
-post7 = user4.posts.create!(title: 'Arts', text: lorem_one, comments_counter: 0, likes_counter: 0)
+post12 = user4.posts.create!(title: 'Programming', text: lorem_one, comments_counter: 0, likes_counter: 0)
+post13 = user4.posts.create!(title: 'Arts', text: lorem_two, comments_counter: 0, likes_counter: 0)
+post12 = user4.posts.create!(title: 'Achool', text: lorem_third, comments_counter: 0, likes_counter: 0)
+post13 = user4.posts.create!(title: 'Business', text: lorem_four, comments_counter: 0, likes_counter: 0)
+
+post12 = user5.posts.create!(title: 'Programming', text: lorem_third, comments_counter: 0, likes_counter: 0)
+post13 = user5.posts.create!(title: 'Arts', text: lorem_four, comments_counter: 0, likes_counter: 0)
 
 user3.comments.create!(text: 'Well Done 👏👏👏', post: post1)
 user2.comments.create!(text: 'Great like post ✔️✔️  ', post: post1)
@@ -60,3 +73,5 @@ user2.likes.create!(post: post5)
 user2.likes.create!(post: post6)
 user2.likes.create!(post: post6)
 user5.likes.create!(post: post7)
+user4.likes.create!(post: post7)
+user1.likes.create!(post: post7)

@@ -4,6 +4,7 @@ class Post < ApplicationRecord
   has_many :likes
 
   after_save :update_posts_counter
+  attr_reader :most_recent_comments
 
   private
 

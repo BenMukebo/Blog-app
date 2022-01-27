@@ -17,9 +17,5 @@
       <%= @post.text %>
     </div>
   </div>
-  <div class="comments-section border-style">
-    <% @post.most_recent_comments.each do |comment|%>
-      <p class="d-flex"><span><%= comment.user.name %>:</span><span><%= comment.text %></span></p>
-    <% end %>
-  </div>
+
 </div>

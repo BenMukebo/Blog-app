@@ -1,17 +1,20 @@
-<h1>Show the user details by ID</h1>
 
 <section class="show-user">
+  <h1>Show the user details by ID</h1>
+  
   <%= render @user %>
+
   <div class="bio">
     <h3>Bio</h3>
     <p><%= @user.bio %></p>
   </div>
   <div class="posts">
-    <%= render @user.posts %>
+    <%= render  @posts %>
   </div> 
   <div class="post-btn d-flex">
-    <button>See All Posts</button>
-  </div>
+    <button>
+      <%= link_to "See all posts", user_posts_path(@user)%>
+    </button>
+    </div>
 </section> 
-
 

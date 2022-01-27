@@ -1,17 +1,13 @@
-<h1>show the posts of a user</h1>
-
 <section class="show-user">
-<div>
-  <%= render @user %>
-  <%= render 'users/user', user: @user %>
-</div>
-<div>
-  <% @posts.each do |post|%>
+  <h1>show the posts of a user</h1>
 
-    <div class="post"
-      <%= render post %>
-      <%= render 'posts/post', post: post %>
-    </div>
-  <% end %>
-</div> 
+  <%= render 'users/user', user: @user %>
+
+  <div class="posts">
+    <% @posts.each do |post|%>
+      <div class="post"
+        <%= render 'posts/post', post: post %>
+      </div>
+    <% end %>
+  </div> 
 </section>
