@@ -4,7 +4,6 @@
   --text-color: #272727;
 }
 
-
 .posts .post-container {
   padding: 0.7rem 0.7rem 1rem;
   margin-top: 1rem;  
@@ -35,8 +34,7 @@
   font-weight: 700;
 }
 
-.post-detail {
-}
+
 .title-details {
   justify-content: space-between;
   margin: 0.5rem 0 2rem;

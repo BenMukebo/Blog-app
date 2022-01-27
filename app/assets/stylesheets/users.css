@@ -14,7 +14,6 @@
   max-width: 100px;
   border: var(--size-border);
   margin-right: 1rem;
-  /* height: 70px; */
 }
 
 img {
@@ -37,7 +36,6 @@ img {
   right: 0.7rem;
 }
 
-
 .show-user .bio {
   padding: 0.7rem;  
   border: var(--size-border);
@@ -48,16 +46,10 @@ img {
   margin: 0.5rem 0 1.8rem;
 }
 
-.show-user .posts{
- 
-}
-
-
 .posts .post-container {
   padding: 0.7rem 0.7rem 1rem;
   margin: 1rem 0;  
   border: var(--size-border);
-  /* color: #272727; */
   background-color: var(--primary-color);
   position: relative;
 }
