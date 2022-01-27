@@ -37,7 +37,7 @@ img {
 }
 
 .show-user .bio {
-  padding: 0.7rem;  
+  padding: 0.7rem;
   border: var(--size-border);
   background-color: var(--primary-color);
 }
@@ -48,7 +48,7 @@ img {
 
 .posts .post-container {
   padding: 0.7rem 0.7rem 1rem;
-  margin: 1rem 0;  
+  margin: 1rem 0;
   border: var(--size-border);
   background-color: var(--primary-color);
   position: relative;
@@ -63,6 +63,7 @@ img {
   bottom: 0.2rem;
   right: 1rem;
 }
+
 .actions span:first-child{
   margin-right: 0.5rem;
 }

@@ -6,7 +6,7 @@
 
 .posts .post-container {
   padding: 0.7rem 0.7rem 1rem;
-  margin-top: 1rem;  
+  margin-top: 1rem;
   border: var(--size-border);
   background-color: var(--primary-color);
   position: relative;
@@ -14,7 +14,7 @@
 
 .post-detail {
   padding: 0.7rem 0.7rem 1rem;
-  margin: 1rem 0;  
+  margin: 1rem 0;
   border: var(--size-border);
   background-color: var(--primary-color);
   position: relative;
@@ -22,7 +22,7 @@
 
 .comments {
   padding: 0.7rem;
-  margin-bottom: 2.3rem;  
+  margin-bottom: 2.3rem;
   border: var(--size-border);
   border-radius: 5px;
   background-color: var(--primary-color);
@@ -30,10 +30,10 @@
   color: var(--text-color);
 }
 
-.comment-container span:first-child, .comments p{
+.comment-container span:first-child,
+.comments p{
   font-weight: 700;
 }
-
 
 .title-details {
   justify-content: space-between;
