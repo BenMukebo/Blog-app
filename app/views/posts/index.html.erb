@@ -1,11 +1,25 @@
 <section class="show-user">
-  <h1>show the posts of a user</h1>
+  <h1>Show all Posts of a user</h1>
 
-  <%= render 'users/user', user: @user %>
+  <% render 'users/user', user: @user %>
+
+   <article class="user d-flex">
+    <div class="img-container">
+      <img src="<%= @user.photo %>" alt="User_Photo">
+    </div>
+    <div class="details d-flex">
+      <h2 class="name"><%= @user.name %></h2>
+      <span class="sub">Number of posts: <%= @user.posts_counter %></span>
+    </div>
+  </article>
 
   <div class="posts">
     <%= render  @posts %>
-  </div>  
-
+  </div>
+  <div class="post-btn">
+    <button>
+      <%= link_to "back", user_path(@user)%>
+    </button>
+  </div>
 
 </section>

@@ -1,6 +1,9 @@
 <section class="posts-details">
   <h1>show posts details</h1>
 
+  <% render  @post %>
+  <% render 'posts/post', post: @post %>
+
   <div class="post-detail">
     <div class="title-details d-flex">
       <h3><%= @post.title %> by <%= @user.name%></h3>
@@ -9,7 +12,7 @@
         <span>Likes: <%= @post.likes_counter%></span>
       </div>
     </div>
-  
+
     <%= @post.text %>
   </div>
 
@@ -25,6 +28,10 @@
       </div>
     <% end %>
   </div>
-    
-
+  
+  <div class="post-btn">
+    <button>
+      <%= link_to "back",  user_posts_path(@user)%>
+    </button>
+  </div>
 </section>
