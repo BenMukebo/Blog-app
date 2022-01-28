@@ -18,7 +18,6 @@
   
     <% post.comments.order('created_at DESC').limit(5).each do |comment|%>
       <div class="comment-container"
-        <span><%=comment.author.name %>:</span>
         <span><%=comment.text %></span>
       </div>
     <% end %>
