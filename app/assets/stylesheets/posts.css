@@ -1,0 +1,41 @@
+:root {
+  --size-border: 2px solid #272727;
+  --prmary-color: #f4f4f4;
+  --text-color: #272727;
+}
+
+.posts .post-container {
+  padding: 0.7rem 0.7rem 1rem;
+  margin-top: 1rem;
+  border: var(--size-border);
+  background-color: var(--primary-color);
+  position: relative;
+}
+
+.post-detail {
+  padding: 0.7rem 0.7rem 1rem;
+  margin: 1rem 0;
+  border: var(--size-border);
+  background-color: var(--primary-color);
+  position: relative;
+}
+
+.comments {
+  padding: 0.7rem;
+  margin-bottom: 2.3rem;
+  border: var(--size-border);
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  line-height: 24px;
+  color: var(--text-color);
+}
+
+.comment-container span:first-child,
+.comments p {
+  font-weight: 700;
+}
+
+.title-details {
+  justify-content: space-between;
+  margin: 0.5rem 0 2rem;
+}

@@ -1,1 +1,37 @@
-<h1>Show the user details by ID</h1>
+
+<section class="show-user">
+  <h1>Show the user details by ID</h1>
+  
+  <%= render @user %>
+
+  <div class="bio">
+    <h3>Bio</h3>
+    <p><%= @user.bio %></p>
+  </div>
+  <div class="posts">
+    <% @posts.each do | post | %>
+      <div class="post-container"> 
+        <div class="post">
+          <h3><%= post.title %></h3>
+          <p><%= post.text[0..25] %> ...</p>
+        </div>
+        <div class="actions d-flex">
+          <span>Comments: <%= post.comments_counter%></span>
+          <span>Likes: <%= post.likes_counter%></span>
+        </div>
+    </div>
+    <% end %>
+  </div> 
+    <div class="post-btn d-flex">
+      <button>
+        <%= link_to "See all posts", user_posts_path(@user)%>
+      </button>
+    </div>
+
+    <div class="post-btn">
+    <button>
+      <%= link_to "back", users_path%>
+    </button>
+  </div>
+</section> 
+

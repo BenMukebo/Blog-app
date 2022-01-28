@@ -21,6 +21,9 @@
 - Use database migration fails to maintain database schema.
 - Set up associations between models.
 - Write SQL queries with Active Record.
+- Use preprocessed HTML file with embedded Ruby code.
+- Use layouts and templates for shared content.
+
 
 ## Getting Started
 
@@ -166,11 +169,25 @@ $  rails generate rspec:install
 ```
 #### Generate Schema
 
-- TopPush the Migration into the database
+- To push the Migration into the database
 
 ```bash
   $   rails db:migrate
 ```
+
+- To drop, create a table and to migrate and send the seed into the database:
+
+```bash
+  $   rails db:drop db:create db:migrate db:seed  
+```
+
+- To check available routes
+
+```bash
+  $   rails routes  
+```
+
+
 ## Built With
 
 This project is build with:
