@@ -4,8 +4,6 @@ class Post < ApplicationRecord
   has_many :likes
   validates :title, :text, presence: true
 
-
-
   after_save :update_posts_counter
 
   private
