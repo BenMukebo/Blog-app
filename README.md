@@ -174,7 +174,7 @@ $  rails generate rspec:install
 ```bash
   $   rails db:migrate
 ```
-
+- We use the seeds.rb file to records in the database
 - To drop, create a table and to migrate and send the seed into the database:
 
 ```bash
