@@ -7,8 +7,8 @@ class LikesController < ApplicationController
     @like = @user.comments.new(post_id: @post.id, author_id: @user.id)
 
     if @like.save
-       redirect_to user_post_path(@user, @post)
-    else 
+      redirect_to user_post_path(@user, @post)
+    else
       render 'new'
     end
   end
