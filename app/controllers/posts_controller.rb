@@ -16,13 +16,12 @@ class PostsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @post = @user.posts.create(post_params)
-    # @post.save
-    # redirect_to user_posts_path(@user)
+
     if @post.save
-      flash[:notice] = 'Post created!'
+      flash[:notice] = 'Post created successfully!'
       redirect_to user_posts_path(@user)
     else
-      flash.now[:alert] = 'Failed to create post!'
+      flash.now[:alert] = 'Failed to create Post!!'
       render :new
     end
   end

@@ -26,7 +26,7 @@
 body {
   width: 100%;
   height: 100%;
-  background: #949494;
+  padding: 0 5%;
 }
 
 * {
@@ -40,6 +40,17 @@ body {
   display: flex;
 }
 
+.flash-message {
+  padding: 0 10%;
+  margin-top: 1rem;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(65, 19, 1);
+  /* background-color: #ccc; */
+  padding: 0.3rem 1rem;
+  border-radius: 8px;
+}
+
 h1 {
   width: 100%;
   text-align: center;
@@ -48,8 +59,8 @@ h1 {
 
 section {
   max-width: 640px;
-  margin: 1.5rem auto;
-  padding: 1rem;
+  margin: 1rem auto 2rem;
+  padding: 1rem ;
   background-color: #ccc;
 }
 
@@ -90,7 +101,7 @@ form {
 
 .input textarea {
   width: 90%;
-  height: 6rem;
+  padding-bottom: 8rem;
   margin: 0.5rem auto 1.5rem;
 }
 
