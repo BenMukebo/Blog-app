@@ -23,6 +23,8 @@
 - Write SQL queries with Active Record.
 - Use preprocessed HTML file with embedded Ruby code.
 - Use layouts and templates for shared content.
+- Use preprocessed HTML file with embedded Ruby code.
+- Use layouts and templates for shared content.
 
 
 ## Getting Started
