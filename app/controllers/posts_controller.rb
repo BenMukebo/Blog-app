@@ -8,5 +8,22 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @post = @user.posts.find(params[:id])
     @comments = @post.comments
+    @likes = @post.likes_counter + 1
+  end
+
+  def create
+    @user = User.find(params[:user_id])
+    @post = @user.posts.create(post_params)
+    @post.save
+    redirect_to user_posts_path(@user)
+  end
+
+  def new
+    @user = User.find(params[:user_id])
+    @post = @user.posts.new
+  end
+
+  def post_params
+    params.require(:post).permit(:title, :text, :comments_counter, :likes_counter)
   end
 end
