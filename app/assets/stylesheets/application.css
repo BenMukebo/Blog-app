@@ -13,12 +13,9 @@
  *= require_tree .
  *= require_self
  */
- 
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
-@import "bootstrap";
 
 :root {
   --size-border: 2px solid #272727;
