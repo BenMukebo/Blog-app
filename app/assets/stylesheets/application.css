@@ -41,7 +41,6 @@ body {
 }
 
 .flash-message {
-  padding: 0 10%;
   margin-top: 1rem;
   font-size: 18px;
   font-weight: 700;
@@ -59,7 +58,7 @@ h1 {
 section {
   max-width: 640px;
   margin: 1rem auto 2rem;
-  padding: 1rem ;
+  padding: 1rem;
   background-color: #ccc;
 }
 
