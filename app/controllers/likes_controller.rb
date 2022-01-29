@@ -1,6 +1,5 @@
 class LikesController < ApplicationController
   def create
-    # redirect_to :back
     @user = User.find(params[:user_id])
     @post = @user.posts.find(params[:post_id])
     @like = @post.likes.new
