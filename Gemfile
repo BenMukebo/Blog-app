@@ -44,6 +44,10 @@ gem 'bootsnap', require: false
 
 # Use Sass to process CSS
 # gem "sassc-rails"
+
+gem 'bootstrap-sass'
+
+gem 'font-awesome-sass'
 gem "font-awesome-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
