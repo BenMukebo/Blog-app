@@ -1,6 +1,6 @@
-# require 'rails_helper'
+require 'rails_helper'
 
-# RSpec.describe Like, type: :model do
+RSpec.describe Like, type: :model do
 #   # pending "add some examples to (or delete) #{__FILE__}"
 #     describe 'update_post_likes_counter' do
 #     it 'should update likes counter for a post' do
@@ -43,4 +43,4 @@
 #       expect(like.post_id).to eq(post.id)
 #     end
 #   end
-# end
+end
