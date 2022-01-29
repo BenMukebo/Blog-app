@@ -1,46 +1,21 @@
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
-#   # pending "add some examples to (or delete) #{__FILE__}"
-#     describe 'update_post_likes_counter' do
-#     it 'should update likes counter for a post' do
-#       user = User.create(name: 'wale', bio: 'bio')
-#       post = Post.create(user_id: user.id, title: 'Post 1', text: 'Post 2 body')
-#       like = Like.create(user_id: user.id, post_id: post.id)
-#       # validate presence of user_id, post_id
-#       expect(like.user_id).to eq(user.id)
-#       expect(like.post_id).to eq(post.id)
-#     end
-#     it 'should update likes counter for a post' do
-#       user = User.create(name: 'wale', bio: 'bio')
-#       post = Post.create(user_id: user.id, title: 'Post 1', text: 'Post 2 body')
-#       like = Like.create(user_id: user.id, post_id: post.id)
-#       expect(like.post_id).to eq(post.id)
-#     end
+  before(:each) do
+    @user = User.new(id: 1, name: 'Ben', bio: 'I am a content creator', photo: '', posts_counter: 0)
+    @post = Post.new(title: 'Post1', text: 'Text...', comments_counter: 0, likes_counter: 1, author_id: @user.id)
+    @like = Like.new(author_id: @user.id, post_id: @user.id)
+  end
 
-#     # validate association with user
-#     it 'should validate association with user' do
-#       user = User.create(name: 'wale', bio: 'bio')
-#       post = Post.create(user_id: user.id, title: 'Post 1', text: 'Post 2 body')
-#       like = Like.create(user_id: user.id, post_id: post.id)
-#       expect(like.user_id).to eq(user.id)
-#     end
+  describe 'validation tests' do
+    it 'validates the author_id is an integer' do
+      @like.author_id = 1
+      expect(@like.author_id).to eq(1)
+    end
 
-#     # validate association with post
-#     it 'should validate association with post' do
-#       user = User.create(name: 'wale', bio: 'bio')
-#       post = Post.create(user_id: user.id, title: 'Post 1', text: 'Post 2 body')
-#       like = Like.create(user_id: user.id, post_id: post.id)
-#       expect(like.post_id).to eq(post.id)
-#     end
-
-#     # validate uniqueness of user_id and post_id
-#     it 'should validate uniqueness of user_id and post_id' do
-#       user = User.create(name: 'wale', bio: 'bio')
-#       post = Post.create(user_id: user.id, title: 'Post 1', text: 'Post 2 body')
-#       like = Like.create(user_id: user.id, post_id: post.id)
-#       expect(like.user_id).to eq(user.id)
-#       expect(like.post_id).to eq(post.id)
-#     end
-#   end
+    it 'validates the post_id is an integer' do
+      @like.post_id = 1
+      expect(@like.post_id).to eq(1)
+    end
+  end
 end
