@@ -25,6 +25,9 @@
 - Use layouts and templates for shared content.
 - Use preprocessed HTML file with embedded Ruby code.
 - Use layouts and templates for shared content.
+- Use validations for models.
+- Write unit tests for models.
+- Secure app from n+1 problems.
 
 
 ## Getting Started
@@ -130,12 +133,16 @@ $  rails generate rspec:install
   gem 'rails-controller-testing'
   gem 'rspec-rails'
 ```
-- Then run:
 
 ```bash
 $  rails generate rspec:install
 ```
 - This should generate some files that you will need to run your tests
+- Then run:
+
+```bash
+$  rspec spec     # to test if your tests are passed
+```
 
 #### Generate migration files
 
