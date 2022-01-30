@@ -5,7 +5,8 @@
 
 ## Description
 
-> The Blog app will be a classic example of a blog website. You will create a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
+> The Blog app will be a classic example of a blog website. I create a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts, add validations to the models, create specs for them, and find and fix N+1 queries problems.
+.
 
 ## Learning objectives
 
