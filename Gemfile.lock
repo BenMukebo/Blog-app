@@ -150,7 +150,7 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.0-x86_64-linux)
+    nokogiri (1.13.0-x64-mingw32)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.21.0)
@@ -256,6 +256,8 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    tzinfo-data (1.2021.5)
+      tzinfo (>= 1.0.0)
     unicode-display_width (2.1.0)
     warden (1.2.9)
       rack (>= 2.0.9)
@@ -276,6 +278,7 @@ GEM
     zeitwerk (2.5.3)
 
 PLATFORMS
+  x64-mingw32
   x86_64-linux
 
 DEPENDENCIES
@@ -306,4 +309,4 @@ RUBY VERSION
    ruby 3.0.3p157
 
 BUNDLED WITH
-   2.3.4
+   2.3.5
