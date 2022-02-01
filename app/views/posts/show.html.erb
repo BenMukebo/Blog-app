@@ -23,6 +23,7 @@
         <span><%= comment.author.name %>:</span>
         <span><%=comment.text %></span>
       </div>
+      <% if can? :destroy, comment %><%= button_to 'Delete Comment', user_post_comment_path(@user.id, @post.id, comment.id), method: :delete, class: 'delete btn btn-primary text-end' %><% end %>
     <% end %>
   </div>
   

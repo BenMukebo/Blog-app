@@ -14,7 +14,7 @@
   </article>
 
   <% @posts.each do |post|%>
-    <div class="post"
+    <div class="post">
       <%= render post %>
       <% if can? :destroy, post %><%= button_to 'Delete Post', user_post_path(@user, post), method: :delete, class: 'delete btn btn-primary text-end' %><% end %>
     </div>

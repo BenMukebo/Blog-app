@@ -24,7 +24,7 @@ class CommentsController < ApplicationController
     post = comment.post
     comment.destroy!
     flash[:alert] = 'Deleted comment'
-    redirect_back fallback_location: [post.user, post]
+    redirect_back fallback_location: [post]
   end
 
   def comment_params
