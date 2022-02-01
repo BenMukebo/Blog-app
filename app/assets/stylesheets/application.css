@@ -4,11 +4,6 @@
   --text-color: #272727;
 }
 
-* {
-  text-decoration: none;
-}
-
-
 body {
   width: 100%;
   height: 100%;
@@ -99,18 +94,14 @@ form {
 }
 
 /* navbar */
-
-
 nav.nav-bar {
   width: 100%;
   max-width: 640px;
   margin: 0 auto 2rem;
-  padding: 1rem;
+  padding: 1rem 0;
   background-color: rgba(204, 204, 204, 0.534);
   justify-content: space-around;
   align-items: center;
-  padding: 0.5rem 1rem;
-  margin: 3rem 0 0;
 }
 
 .nav-bar .home-page {
@@ -129,9 +120,7 @@ nav.nav-bar {
   border: 1rem;
 }
 
-
 /* user */
-
 .user {
   width: 100%;
   height: 80px;
@@ -187,11 +176,11 @@ img {
   margin: 0.5rem 0;
 }
 
-.post-container .actions {
+/* .post-container .actions {
   position: absolute;
   bottom: 0.2rem;
   right: 1rem;
-}
+} */
 
 .actions span:first-child {
   margin-right: 0.5rem;
@@ -209,12 +198,6 @@ img {
 }
 
 /* post */
-
-
-
-
-
-
 .posts .post-container {
   padding: 0.7rem 0.7rem 1rem;
   margin-top: 1rem;
