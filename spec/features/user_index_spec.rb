@@ -6,7 +6,7 @@ RSpec.describe 'User Index Page', type: :feature do
     @photo = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/microsoft/58/ballot-box-with-x_2612.png'
     @user1 = User.create(name: 'John Doe', photo: @photo, email: 'joe@mail.com', password: '123456', posts_counter: 6)
     @user2 = User.create(name: 'Michal Smith', photo: @photo, email: 'michal@mail.com', password: '123456',
-      posts_counter: 3)
+                         posts_counter: 3)
     fill_in 'Email', with: 'joe@gmail.com'
     fill_in 'Password', with: '123456'
     click_button 'Log in'
