@@ -1,9 +1,6 @@
 <section class="posts-details">
   <h1>show posts details</h1>
 
-  <% render  @post %>
-  <% render 'posts/post', post: @post %>
-
   <div class="post-detail">
     <div class="title-details d-flex">
       <h3><%= @post.title %> by <%= @user.name%></h3>
@@ -23,9 +20,10 @@
 
     <% @comments.each do |comment|%>
       <div class="comment-container"
-        <span><%= @user.name %>:</span>
+        <span><%= comment.author.name %>:</span>
         <span><%=comment.text %></span>
       </div>
+      <% if can? :destroy, comment %><%= button_to 'Delete Comment', user_post_comment_path(@user.id, @post.id, comment.id), method: :delete, class: 'delete btn btn-primary text-end' %><% end %>
     <% end %>
   </div>
   
