@@ -87,5 +87,10 @@ RSpec.describe 'Post Index Page Features', type: :feature, js: true do
     it 'a section for pagination if there are more posts than fit on the view.' do
       expect(page).to have_content('Add Post')
     end
+
+    it 'When I click on a post, it redirects me to that post\'s show page.' do
+      click_link 'Education'
+      expect(page).to have_current_path user_post_path(@user1, @post1)
+    end
   end
 end
