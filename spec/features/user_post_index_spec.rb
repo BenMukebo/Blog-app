@@ -53,20 +53,13 @@ RSpec.describe 'Post Index Page Features', type: :feature, js: true do
     end
 
     it 'the user\'s username' do
-      # visit user_posts_path(@user1.id)
       expect(page).to have_content 'John Doe'
     end
 
-    # it 'the number of posts the user has written' do
-    #   @posts = page.all('posts .post')
-    #   expect(@posts.length).to eql 2
-    #   expect(page).to have_content 'Number of posts 2'
-    # end
-
-    # it 'the number of posts the user has written' do
-    #   # visit user_posts_path(@user1.id)
-    #   expect(page).to have_content('Number of Posts: 3')
-    # end
+    it 'the number of posts the user has written' do
+      # visit user_posts_path(@user1.id)
+      expect(page).to have_content('Number of posts: 8')
+    end
 
     it 'some post\'s title.' do
       expect(page).to have_content 'Education'
@@ -90,5 +83,7 @@ RSpec.describe 'Post Index Page Features', type: :feature, js: true do
     it 'how many likes a post has' do
       expect(page).to have_content('Likes: 2')
     end
+
+  
   end
 end
