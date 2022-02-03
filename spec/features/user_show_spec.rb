@@ -1,144 +1,55 @@
 # rubocop:disable Metrics/BlockLength
 require 'rails_helper'
-require './spec/mocks_module'
 
 RSpec.describe 'user show view', type: :feature do
-  include Mocks
-
   before :each do
-    users = create_users
-    posts = create_posts(users)
-    create_likes_comments(users, posts)
+    visit user_session_path
 
-    visit new_user_session_path
+    @photo = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/microsoft/58/ballot-box-with-x_2612.png'
+    @user1 = User.create(name: 'John Doe', bio: 'Lorem ipsum dolor sit amet', photo: @photo, email: 'joe@mail.com', password: '123456', posts_counter: 6)
 
-    within('form') do
-      fill_in 'user_email', with: 'foo1@foo.com'
-      fill_in 'user_password', with: 'admin123'
-    end
+    fill_in 'user_email', with: 'joe@mail.com'
+    fill_in 'user_password', with: '123456'
     click_button 'Log in'
+
+    @post1 = @user1.posts.create!(title: 'Animal', text: 'lorem_one', comments_counter: 0, likes_counter: 0)
+    @post2 = @user1.posts.create!(title: 'Population', text: 'lorem_two', comments_counter: 0, likes_counter: 0)
+    @post3 = @user1.posts.create!(title: 'Science', text: 'lorem_one', comments_counter: 0, likes_counter: 0)
+  
+    visit user_path(@user1)
   end
 
-  context 'displaying correctly' do
-    it 'can see user picture' do
-      users = User.all
-
-      users.each do |user|
-        visit user_path(user.id)
-
-        img = page.find('img')
-
-        expect(img['src']).to include(user.name)
-
-        visit root_path
-      end
-    end
-
-    it 'can see user username' do
-      users = User.all
-
-      users.each do |user|
-        visit user_path(user.id)
-
-        expect(page).to have_content user.name
-
-        visit root_path
-      end
-    end
-
-    it 'can see user post counter' do
-      users = User.all
-
-      users.each do |user|
-        visit user_path(user.id)
-
-        expect(page).to have_content "Number of posts: #{user.posts_counter}"
-
-        visit root_path
-      end
-    end
-
-    it 'can see user bio' do
-      users = User.all
-
-      users.each do |user|
-        visit user_path(user.id)
-
-        expect(page).to have_content 'BIO'
-        expect(page).to have_content user.bio
-
-        visit root_path
-      end
-    end
-
-    it 'can see user recent_posts' do
-      users = User.all
-
-      users.each do |user|
-        visit user_path(user.id)
-
-        recent_posts = user.most_recent_posts
-        recent_posts.each do |post|
-          expect(page).to have_content "#{post.title} - ##{post.id}"
-        end
-
-        visit root_path
-      end
-    end
-
-    it 'can see see all posts button' do
-      users = User.all
-
-      users.each do |user|
-        visit user_path(user.id)
-
-        expect(page).to have_content 'See all posts'
-
-        visit root_path
-      end
-    end
+  it 'Should see the user\'s profile picture' do
+    image_src = page.find('img')['src']
+    expect(image_src).to eql @photo
   end
 
-  # When I click a user's post, it redirects me to that post's show page.
-
-  context 'should redirect to post path' do
-    it 'user can see all users posts number' do
-      users = User.all
-
-      users.each do |user|
-        visit user_path(user.id)
-
-        recent_posts = user.most_recent_posts
-        a = all('a#post_container')
-
-        a.each_with_index do |link, index|
-          visit user_path(user.id)
-          post = recent_posts[index]
-          link.click
-
-          expect(current_path).to eq(user_post_path(user.id, post.id))
-        end
-        visit root_path
-      end
-    end
+  it 'Should see the user\'s username' do
+    expect(page).to have_content 'John Doe'
   end
 
-  # When I click to see all posts, it redirects me to the user's post's index page.
+  it 'Should see the number of posts the user has written' do
+    expect(page).to have_content 'Number of posts: 9'
+  end
 
-  context 'should redirect to post index view' do
-    it 'can see all users posts number' do
-      users = User.all
+  it 'Should see the user\'s bio' do
+    expect(page).to have_content 'Lorem ipsum dolor sit amet'
+  end
 
-      users.each do |user|
-        visit user_path(user.id)
+  it 'Should see the user\'s first 3 posts.' do
+    expect(page).to have_content 'lorem_one'
+    expect(page).to have_content 'lorem_two'
+    expect(page).to have_content 'lorem_one'
+  end
 
-        click_link 'See all posts'
+  it 'I can see a button that lets me view all of a user\'s posts.' do
+    click_button 'Animal'
+    expect(page).to have_current_path user_post_path(@user1, @post1)
+  end
 
-        expect(current_path).to eq(user_posts_path(user.id))
-
-        visit root_path
-      end
-    end
+  it 'When I click to see all posts, it redirects me to the user\'s post\'s index page.' do
+    click_button 'See all posts'
+    expect(page).to have_current_path user_posts_path(@user1)
   end
 end
 # rubocop:enable Metrics/BlockLength
