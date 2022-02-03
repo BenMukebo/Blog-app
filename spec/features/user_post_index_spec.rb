@@ -16,8 +16,8 @@ RSpec.describe 'Post Index Page Features', type: :feature, js: true do
       posts_counter: 3
     )
 
-    fill_in 'Email', with: 'mike@gmail.com'
-    fill_in 'Password', with: 'mikemike'
+    fill_in 'Email', with: 'joe@mail.com'
+    fill_in 'Password', with: '123456'
     click_button 'Log in'
 
     # Posts
