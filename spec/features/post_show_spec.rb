@@ -54,5 +54,17 @@ RSpec.describe 'Post Index Page Features', type: :feature, js: true do
       expect(page).to have_content 'John Doe'
     end
 
+    it 'how many comments it has.' do
+      expect(page).to have_content 'Comments: 2'
+    end
+
+    it 'how many likes it has.' do
+      expect(page).to have_content 'Likes: 2'
+    end
+
+    it 'the post body.' do
+      expect(page).to have_content 'This is second Sport post!'
+    end
+
   end
 end
