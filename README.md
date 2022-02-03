@@ -60,6 +60,13 @@ $ git clone https://github.com/BenMukebo/Blog-app.git
 $ cd Blog-app
 ```
 
+### Create the database
+
+```bash
+$   rails db:create   # or
+$   rake db:create
+```
+
 ### Creating the hello-rails Application
 
 - use PostgreSQL database 
@@ -93,29 +100,13 @@ $ rubocop --auto-correct-all
 ```
 
 
-### Create the database
-
-```bash
-$   rails db:create   # or
-$   rake db:create
-```
-
 ### Starting up the Web Server
 
 ```bash
 $   rails s # or
-$   rails server 
+$   rails server # or
+$   rails server -p3001
 ```
-
-
-#### Generate Controller
-
-- We need a Controller. Since everything goes through that, let's go ahead and generate one:
-
-```bash
-$  rails generate rspec:install
-```
-- This should give us a Controller and a View
 
 
 #### Listing Existing Routes
@@ -135,10 +126,13 @@ $  rails generate rspec:install
   gem 'rspec-rails'
 ```
 
+#### Install RSpec
+
 ```bash
 $  rails generate rspec:install
 ```
-- This should generate some files that you will need to run your tests
+- This should generate some files that you will need to run your tests and should give us a Controller and a View
+
 - Then run:
 
 ```bash

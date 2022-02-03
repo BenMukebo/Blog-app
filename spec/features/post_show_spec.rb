@@ -66,5 +66,13 @@ RSpec.describe 'Post Index Page Features', type: :feature, js: true do
       expect(page).to have_content 'This is second Sport post!'
     end
 
+    it 'the username of each commentor.' do
+      expect(page).to have_content 'John Doe'
+    end
+
+    it 'the comment each commentor left.' do
+      expect(page).to have_content 'Amezing'
+      expect(page).to have_content 'Fantastic'
+    end
   end
 end
