@@ -57,5 +57,28 @@ RSpec.describe 'Post Index Page Features', type: :feature, js: true do
       expect(page).to have_content 'John Doe'
     end
 
-    
+    # it 'the number of posts the user has written' do
+    #   @posts = page.all('posts .post')
+    #   expect(@posts.length).to eql 2
+    #   expect(page).to have_content 'Number of posts 2'
+    # end
+
+    # it 'the number of posts the user has written' do
+    #   # visit user_posts_path(@user1.id)
+    #   expect(page).to have_content('Number of Posts: 3')
+    # end
+
+    it 'some post\'s title.' do
+      expect(page).to have_content 'Education'
+      expect(page).to have_content 'Sport'
+    end
+
+    it 'some of the post\'s body.' do
+      # visit user_posts_path(@user1.id)
+      expect(page).to have_content 'This is first Educat post!'
+      expect(page).to have_content 'This is second Sport post!'
+    end
+
+   
+  end
 end
