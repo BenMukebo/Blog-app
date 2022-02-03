@@ -84,6 +84,8 @@ RSpec.describe 'Post Index Page Features', type: :feature, js: true do
       expect(page).to have_content('Likes: 2')
     end
 
-  
+    it 'a section for pagination if there are more posts than fit on the view.' do
+      expect(page).to have_content('Add Post')
+    end
   end
 end
