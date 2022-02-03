@@ -19,8 +19,6 @@ RSpec.describe 'Post Index Page Features', type: :feature, js: true do
     fill_in 'Password', with: 'mikemike'
     click_button 'Log in'
 
-    # Posts
-
     @post1 = @user1.posts.create!(
       title: 'Education', text: 'This is first Educat post!', comments_counter: 0, likes_counter: 0
     )

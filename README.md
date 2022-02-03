@@ -191,6 +191,13 @@ $  rspec spec     # to test if your tests are passed
   $   rails routes  
 ```
 
+#### Run Capybara
+
+```bash
+$  bundle exec rspec ./spec/features/user_show_spec.rb
+$  bundle exec rspec ./spec/features/post_show_spec.rb
+$  bundle exec rspec ./spec/features/user_post_index_spec.rb  
+```
 
 ## Built With
 

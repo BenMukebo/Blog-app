@@ -2,8 +2,6 @@ require 'rails_helper'
 
 RSpec.describe 'Post Index Page Features', type: :feature, js: true do
   before(:each) do
-    # visit new_user_registration_path
-    # visit new_user_session_path
     visit user_session_path
     @photo = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/microsoft/58/ballot-box-with-x_2612.png'
 
@@ -57,7 +55,6 @@ RSpec.describe 'Post Index Page Features', type: :feature, js: true do
     end
 
     it 'the number of posts the user has written' do
-      # visit user_posts_path(@user1.id)
       expect(page).to have_content('Number of posts: 8')
     end
 
