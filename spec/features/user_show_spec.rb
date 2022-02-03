@@ -6,7 +6,7 @@ RSpec.describe 'user show view', type: :feature do
 
     @photo = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/microsoft/58/ballot-box-with-x_2612.png'
     @user1 = User.create!(name: 'John Doe', bio: 'Lorem ipsum dolor sit amet', photo: @photo,
-      email: 'joe@mail.com', password: '123456', posts_counter: 6)
+                          email: 'joe@mail.com', password: '123456', posts_counter: 6)
 
     fill_in 'user_email', with: 'joe@mail.com'
     fill_in 'user_password', with: '123456'
@@ -51,4 +51,3 @@ RSpec.describe 'user show view', type: :feature do
     expect(page).to have_current_path user_posts_path(@user1)
   end
 end
-# rubocop:enable Metrics/BlockLength

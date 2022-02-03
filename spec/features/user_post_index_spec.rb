@@ -10,8 +10,8 @@ RSpec.describe 'Post Index Page Features', type: :feature, js: true do
       password: '123456', posts_counter: 6
     )
     @user2 = User.create!(
-      name: 'Michal Smith', bio: 'This is Michal Smith bio', photo: @photo, email: 'michal@mail.com', password: '123456',
-      posts_counter: 3
+      name: 'Michal Smith', bio: 'This is Michal Smith bio', photo: @photo,
+      email: 'michal@mail.com', password: '123456', posts_counter: 3
     )
 
     fill_in 'Email', with: 'joe@mail.com'
