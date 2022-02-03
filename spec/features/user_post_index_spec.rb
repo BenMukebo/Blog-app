@@ -52,6 +52,10 @@ RSpec.describe 'Post Index Page Features', type: :feature, js: true do
       expect(image).to eql @photo
     end
 
+    it 'the user\'s username' do
+      # visit user_posts_path(@user1.id)
+      expect(page).to have_content 'John Doe'
+    end
 
     
 end
