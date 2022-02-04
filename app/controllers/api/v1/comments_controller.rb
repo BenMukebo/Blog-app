@@ -5,7 +5,7 @@ module Api
 
       def index
         @comments = Comment.where({ post_id: params[:post_id] }).order('created_at DESC')
-        render json: { success: true, data: { comments: @comments } } 
+        render json: { success: true, data: { comments: @comments } }
       end
     end
   end
