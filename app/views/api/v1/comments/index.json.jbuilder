@@ -1,14 +1,8 @@
-json.array!(@posts) do |post|
-    json.id post.id
-  json.array!(@comments) do |comment|
-    json.post_title comment.post.title
-    json.post_text comment.post.text
+json.array!(@comments) do |comment|
+  json.post_title comment.post.title
+  json.post_text comment.post.text
+  json.comments do
+    json.username comment.user.name
+    json.comment_text comment.text
   end
-  
-  json.array!(@comments) do |comment|
-    json.comments do
-      json.username comment.user.name
-      json.comment_text comment.text
-    end
-  end
-    
+end
