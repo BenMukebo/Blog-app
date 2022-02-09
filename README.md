@@ -72,31 +72,42 @@ $   rake db:create
 - use PostgreSQL database 
 
 ```bash
-$   rails new hello-rails --database=postgresql  #or
-$   rails new hello-rails -d postgresql
+$   rails new blog-app --database=postgresql  #or
+$   rails new blog-app -d postgresql
 
 $   cd hello-rails # Move into the application directory
 ```
 
-### Install linter
+### Install linter and 
+
+- Rubocop gem
 
 ```bash
 $  bundle init
 $  bundle install
+```
+- Stylelint package
+
+```bash
+$  npm init -y
+$  npm install
+$  npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+
 ```
 
 - Run linter
 
 ```bash
 $  rubocop .
+$  npx stylelint "**/*.{css,scss}" 
 ```
 
 - In auto-correct mode, RuboCop will try to automatically fix offenses:
 
 ```bash
-$ rubocop -A
-# or
-$ rubocop --auto-correct-all
+$  rubocop -A # or
+$  rubocop --auto-correct-all
+$  npx stylelint "**/*.{css,scss}" --fix 
 ```
 
 
