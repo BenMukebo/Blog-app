@@ -174,13 +174,11 @@ $  rspec spec     # to test if your tests are passed
 ```
 
 
-#### Generate model
+#### Generate controllers
 
 ```bash
-  $  rails generate model User name  photo bio:text posts_counter:integer  
-  $  rails generate model Post  title  text:text comments_counter:integer likes_counter:integer author:references
-  $  rails generate model Like author:references post:references 
-  $  rails generate model Comments text:text author:references post:references
+  $  rails generate controller users index show
+  $  rails generate controller posts index show
 ```
 #### Generate Schema
 
