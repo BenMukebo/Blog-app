@@ -1,4 +1,4 @@
-# Assuming you have not yet modified this file, each configuration option below
+# Assuming you have not yet modified this file, each configuration option below # rubocop:todo Layout/EndOfLine
 # is set to its default value. Note that some are commented out while others
 # are not: uncommented lines are intended to protect your configuration from
 # breaking changes in upgrades (i.e., in the event that future versions of
@@ -7,6 +7,11 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+  config.jwt do |jwt|
+    # rubocop:todo Layout/LineLength
+    jwt.secret = '9c13b525b02dc5d585f8c199e9ca1b48dbff280b4712df3f0b21efcab0141cbf45e35b478f1165116cd4e440ba60f1e324ca9be5963d077fc87850e68ce1d8ef'
+    # rubocop:enable Layout/LineLength
+  end
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.

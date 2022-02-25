@@ -2,7 +2,7 @@
   <h2>BlogApp</h2>
   <% if user_signed_in? %>
     <%= link_to "Home", root_path, class: "home-page" %>
-    <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn sign-out" %>
+    <%= button_to "Sign Out", destroy_user_session_path, method: :delete, data: {turbo: false}, class: "btn sign-out" %>
   <% else %>
     <%= link_to "Sign In", new_user_session_path, class: "btn sign-in" %>
     <%= link_to "Sign Up", new_user_registration_path, class: "btn sign-up" %>

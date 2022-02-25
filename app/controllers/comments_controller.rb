@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
   def new
     @user = User.find(params[:user_id])
     @post = @user.posts.find(params[:post_id])
@@ -6,16 +7,15 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:user_id])
-    @post = @user.posts.find(params[:post_id])
-    @comment = @user.comments.new(text: comment_params[:text], post_id: @post.id, author_id: @user.id)
-
-    if @comment.save
-      flash[:notice] = 'Comment created successfuly!'
-      redirect_to user_post_path(@user, @post)
+    post = Post.find(params[:post_id])
+    comment = current_user.comments.build(text: params[:text])
+    comment.post = post
+    if comment.save
+      flash[:success] = 'Your comment has been added!'
+      redirect_to root_path
     else
-      flash.now[:alert] = 'Failed to create Comment!!'
-      render :new
+      flash.now[:error] = 'Comment could not be added'
+      render user_post_path
     end
   end
 
