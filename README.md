@@ -60,13 +60,6 @@ $ git clone https://github.com/BenMukebo/Blog-app.git
 $ cd Blog-app
 ```
 
-### Create the database
-
-```bash
-$   rails db:create   # or
-$   rake db:create
-```
-
 ### Creating the hello-rails Application
 
 - use PostgreSQL database 
@@ -111,13 +104,29 @@ $  npx stylelint "**/*.{css,scss}" --fix
 ```
 
 
+### Create the database
+
+```bash
+$   rails db:create   # or
+$   rake db:create
+```
+
 ### Starting up the Web Server
 
 ```bash
 $   rails s # or
-$   rails server # or
-$   rails server -p3001
+$   rails server 
 ```
+
+
+#### Generate Controller
+
+- We need a Controller. Since everything goes through that, let's go ahead and generate one:
+
+```bash
+$  rails generate rspec:install
+```
+- This should give us a Controller and a View
 
 
 #### Listing Existing Routes
@@ -137,13 +146,10 @@ $   rails server -p3001
   gem 'rspec-rails'
 ```
 
-#### Install RSpec
-
 ```bash
 $  rails generate rspec:install
 ```
-- This should generate some files that you will need to run your tests and should give us a Controller and a View
-
+- This should generate some files that you will need to run your tests
 - Then run:
 
 ```bash
@@ -200,13 +206,6 @@ $  rspec spec     # to test if your tests are passed
   $   rails routes  
 ```
 
-#### Run Capybara
-
-```bash
-$  bundle exec rspec ./spec/features/user_show_spec.rb
-$  bundle exec rspec ./spec/features/post_show_spec.rb
-$  bundle exec rspec ./spec/features/user_post_index_spec.rb  
-```
 
 ## Built With
 
